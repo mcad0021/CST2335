@@ -9,21 +9,29 @@
     tools:context=".ListItemsActivity">
 
     <RadioButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
         android:text="@string/radio_text"
         android:layout_columnWeight="1"
         android:gravity="fill"/>
 
     <CheckBox
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
         android:text="@string/check_text"
         android:layout_columnWeight="1"
         android:gravity="fill"/>
 
     <Switch
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
         android:layout_columnWeight="1"
         android:gravity="fill"
         android:text="@string/switch_text"/>
 
     <ImageButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
         android:layout_columnWeight="1"
         android:gravity="fill"
         android:src="@android:drawable/ic_menu_camera" />
