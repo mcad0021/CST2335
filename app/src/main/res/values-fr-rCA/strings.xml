@@ -8,5 +8,9 @@
     <string name="switch_text">Qu\'est-ce que cela fait?</string>
     <string name="radio_text">Bouton radio</string>
     <string name="check_text">case à cocher</string>
+    <string name="dialog_message">Voulez-vous quitter?</string>
+    <string name="dialog_title">Confirmation Requise</string>
+    <string name="ok">Oui</string>
+    <string name="cancel">Non</string>
     <string name="ButtonText">I\'m a french button</string>
 </resources>
