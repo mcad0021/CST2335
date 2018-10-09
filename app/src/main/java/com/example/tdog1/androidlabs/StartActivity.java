@@ -13,12 +13,22 @@ public class StartActivity extends Activity {
     protected static final String ACTIVITY_NAME = "StartActivity";
 
     private Button listItemsActivityStart;
+    private Button startChat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-
+        startChat = findViewById(R.id.startchat_button);
+        startChat.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+                Intent intent = new Intent(StartActivity.this, ChatWindow.class);
+                startActivityForResult(intent, 50);
+            }
+        });
+        
         listItemsActivityStart = findViewById(R.id.startNextActivity);
         listItemsActivityStart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,10 +41,8 @@ public class StartActivity extends Activity {
     }
 
     protected void onActivityResult(int requestCode, int responseCode, Intent data){
-       if(requestCode == 50){
+       if(requestCode == 50 && responseCode == Activity.RESULT_OK){
            Log.i(ACTIVITY_NAME, "Returned to StartActivity.onActivityResult");
-       }
-       if(responseCode == Activity.RESULT_OK){
            String messagePassed = data.getStringExtra("Response");
            CharSequence text = messagePassed;// "Switch is Off"
            int duration = Toast.LENGTH_SHORT; //= Toast.LENGTH_LONG if Off

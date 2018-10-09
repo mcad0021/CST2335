@@ -12,4 +12,7 @@
     <string name="ok">Yes</string>
     <string name="cancel">No</string>
     <string name="ButtonText">I\'m a button</string>
+    <string name="start_chat">Start Chat</string>
+    <string name="send">Send</string>
+    <string name="enter_text">Type Here</string>
 </resources>
